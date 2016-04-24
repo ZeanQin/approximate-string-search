@@ -1,0 +1,28 @@
+Student ID: 604030
+Student Name: Zean Qin
+
+INSTRUCTIONS: 
+
+The following algorithms are used to identify the movie title for each review: 
+  1. Smith-Waterman algorithm (local edit distance)
+  2. Neighbourhood-search (AGREP)
+  3. Levenshtein algorithm
+
+Before running the programs, make sure the folder contains the following files/directories: 
+  1. 'film_titles.txt'
+  2. 'revs/' which contains the list of review files
+  3. 'lib/' which contains library files including the implementations of the algorithms being used 
+  4. 'local-edit-distance.py' which uses the Smith-Waterman algorithm to do approximate matching
+  5. 'neighbourhood-search.py' which uses AGREP to perform approximate match. 
+  6. 'levenshtein.py' which uses the Levenshtein algorithm to analys the review files. 
+
+To run the Smith-Waterman algorithm, just type in './local-edit-distance.py' and hit 'Enter'. The output will be saved to the './result/local-edit-distance/' folder. Each output file contains the matched movie titles with an edit distance of bigger than 0. Each line in the output file contains the movie title and its corresponding edit distance. And all results are sorted by the edit distance with the best match listed on top. 
+
+Make sure AGREP is installed on the machine. To run the neighbourhood search, just type './neighbourhood-search.py' and hit 'Enter'. The output files will be saved to the './result/neighbourhood-search/' folder. Each output file contains the matched movies titles with their corresponding match cost. The results are listed in the order of match cost with 0 being a complete match. 
+
+To run the Levenshtein algorithm, type in './levenshtein.py' and hit 'Enter'. The result files will be stored in './revs/levenshtein/'. Each result file contains the list of matches with the closest match listed on top. 
+
+REFERENCES: 
+1. The data set('film_titles.txt' and all files in './revs/') is curated by: "Andrew L. Maas, Raymond E. Daly, Peter T. Pham, Dan Huang, Andrew Y. Ng, and Christopher Potts. (2011). Learning Word Vectors for Sentiment Analysis. The 49th Annual Meeting of the Association for Computational Linguistics (ACL 2011)". And it can be downloaded from this page: http://ai.stanford.edu/%7Eamaas/data/sentiment/index.html. 
+
+2. The 'alignment.py' file in the 'lib/' folder contains the implementation of the Smith-Waterman algorithm. The implementation is downloaded from: https://github.com/alevchuk/pairwise-alignment-in-python
